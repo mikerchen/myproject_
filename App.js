@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, Button } from 'react-native'
 import {
   NavigationContainer,
   DefaultTheme,
@@ -10,26 +10,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import DT from './darkTheme'
 import myDarkTheme from './darkTheme'
-
-function HomeScreen() {
-  return (
-    <SafeAreaView>
-      <View>
-        <Text style={{ color: 'white' }}>Home Screen</Text>
-      </View>
-    </SafeAreaView>
-  )
-}
-
-const HomeStack = createStackNavigator()
-
-function HomeScrenStack({ navigation }) {
-  return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name='Home' component={HomeScreen}></HomeStack.Screen>
-    </HomeStack.Navigator>
-  )
-}
+import Film from './src/components/FilmComponent'
+import HomeScrenStack from './src/navigators/HomeNavigator'
 
 function App() {
   const scheme = useColorScheme()
